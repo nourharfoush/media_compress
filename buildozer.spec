@@ -18,10 +18,9 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 1.0.0
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.3.0,kivymd==1.2.0,plyer,ffmpeg-python
+requirements = python3,kivy,kivymd,plyer
 
-# (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
+# (str) Supported orientation
 orientation = portrait
 
 # (bool) Indicate if the application should be fullscreen or not
@@ -30,24 +29,24 @@ fullscreen = 0
 # (list) Permissions
 android.permissions = READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, INTERNET
 
-# (int) Target Android API, should be as high as possible.
+# (int) Target Android API
 android.api = 33
 
-# (int) Minimum API your APK will support.
+# (int) Minimum API
 android.minapi = 21
 
-# (str) Android NDK version to use
+# (str) Android NDK version
 android.ndk = 25b
 
-# (list) List of Android architectures to build for
-android.archs = arm64-v8a, armeabi-v7a
+# (list) Architectures
+android.archs = arm64-v8a
 
-# (bool) Enable AndroidX support
+# (bool) Enable AndroidX
 android.androidx = True
 
-[buildozer]
-# (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 2
+# (bool) Auto accept SDK license
+android.accept_sdk_license = True
 
-# (int) Display warning if buildozer is run as root (0 = false, 1 = true)
+[buildozer]
+log_level = 2
 warn_on_root = 1
